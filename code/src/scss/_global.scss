@@ -68,13 +68,16 @@ a:hover {
 // Button
 button,
 .button {
-	display: inline-block;
-	padding: .875rem 2.185rem;
-	// background: linear-gradient(to right, $limeGreen, $brightCyan);
-	border: 0;
-	border-radius: 50px;
+	display: block;
+	margin: 0 auto;
+	padding: 0.75rem 2.485rem;
+	letter-spacing: 1px;
+	border: 2px solid $white;
 	cursor: pointer;
+	font-family: $font-body;
+	background: transparent;
 	color: $white;
+	text-transform: uppercase;
 	font-weight: 400;
 	font-size: $font-sm;
 	transition: opacity 300ms ease-in-out;
@@ -105,9 +108,9 @@ button,
 	margin: 0 auto;
 
 	&--pall {
-		padding-top: 4.375rem;
+		padding-top: 5.625rem;
 		padding-right: 1.5rem;
-		padding-bottom: 4.375rem;
+		padding-bottom: 5.625rem;
 		padding-left: 1.5rem;
 
 		@include breakpoint-up(large) {
