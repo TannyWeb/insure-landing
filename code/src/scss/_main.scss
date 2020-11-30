@@ -1,7 +1,29 @@
 .main {
-	img {
+	&__img {
 		display: block;
 		width: 100%;
+
+		@include breakpoint-up(medium) {
+			grid-column: 2/3;
+			grid-row: 1/-1;
+		}
+
+		&.desktop {
+			display: none;
+			@include breakpoint-up(medium) {
+				position: absolute;
+				display: block;
+				margin-bottom: -12.1875rem;
+				padding-left: 1.25rem;
+			}
+		}
+
+		&.mobile {
+			display: block;
+			@include breakpoint-up(medium) {
+				display: none;
+			}
+		}
 	}
 
 	&__text_wrap {
@@ -31,28 +53,64 @@
 			background-repeat: no-repeat;
 		}
 
-		h1 {
-			color: $white;
-			font-family: $font-heading;
-			text-align: center;
+		.container {
+			@include breakpoint-up(medium) {
+				position: relative;
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+				grid-template-rows: repeat(3, 1fr);
+				padding-top: 6.875rem;
+				padding-bottom: 0;
+			}
 
-			@include breakpoint-up(large) {
+			h1 {
+				color: $white;
+				font-family: $font-heading;
+				text-align: center;
+
+				@include breakpoint-up(medium) {
+					margin: 0;
+					grid-column: 1/2;
+					grid-row: 1/2;
+					text-align: left;
+				}
+
 				&::before {
-					content: '';
-					position: absolute;
-					width: 9.375rem;
-					height: 0.0625rem;
-					background-color: $white;
-					top: 4.6875rem;
+					@include breakpoint-up(medium) {
+						content: '';
+						position: absolute;
+						width: 9.375rem;
+						height: 0.0625rem;
+						background-color: $white;
+						top: 4.6875rem;
+					}
 				}
 			}
-		}
 
-		p {
-			font-family: $font-body;
-			font-weight: light;
-			color: $white;
-			text-align: center;
+			p {
+				font-family: $font-body;
+				font-weight: light;
+				color: $white;
+				text-align: center;
+
+				@include breakpoint-up(medium) {
+					margin: 0.9375rem 0 0 0;
+					grid-column: 1/2;
+					grid-row: 2/3;
+					text-align: left;
+					font-size: 16px;
+				}
+			}
+
+			button {
+				@include breakpoint-up(medium) {
+					grid-column: 1/2;
+					grid-row: 3/4;
+					height: 2.625rem;
+					width: 8.75rem;
+					margin-top: 15px;
+				}
+			}
 		}
 	}
 }

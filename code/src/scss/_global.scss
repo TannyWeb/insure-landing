@@ -113,9 +113,18 @@ button,
 		padding-bottom: 5.625rem;
 		padding-left: 1.5rem;
 
-		@include breakpoint-up(large) {
+		@include breakpoint-up(medium) {
 			padding-top: 6rem;
 			padding-bottom: 6rem;
+			padding-right: 8.75rem;
+			padding-left: 8.75rem;
+		}
+
+		@include breakpoint-up(large) {
+			padding-top: 8.75rem;
+			padding-bottom: 8.75rem;
+			padding-right: 8.75rem;
+			padding-left: 8.75rem;
 		}
 	}
 
@@ -126,6 +135,11 @@ button,
 	&--px {
 		padding-right: 1.5rem;
 		padding-left: 1.5rem;
+
+		@include breakpoint-up(large) {
+			padding-right: 8.75rem;
+			padding-left: 8.75rem;
+		}
 	}
 	&--pt {
 		padding-top: 4.375rem;

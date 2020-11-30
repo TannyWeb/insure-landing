@@ -1,6 +1,10 @@
 .header {
 	.container {
-		padding: 2rem;
+		padding-top: 1.5rem;
+		padding-bottom: 1.5rem;
+
+		@include breakpoint-up(large) {
+		}
 	}
 
 	.overlay {
