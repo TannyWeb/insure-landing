@@ -35,7 +35,17 @@
 			color: $white;
 			font-family: $font-heading;
 			text-align: center;
-			z-index: 3;
+
+			@include breakpoint-up(large) {
+				&::before {
+					content: '';
+					position: absolute;
+					width: 9.375rem;
+					height: 0.0625rem;
+					background-color: $white;
+					top: 4.6875rem;
+				}
+			}
 		}
 
 		p {
