@@ -1,6 +1,17 @@
 .header {
 	outline: 1px solid red;
-	padding: 2rem;
+
+	.container {
+		padding: 2rem;
+	}
+
+	.overlay {
+		position: absolute;
+		background-color: bisque;
+		width: 100%;
+		height: calc(100vh - 104px);
+		margin-top: 6.5rem;
+	}
 
 	&__link {
 		font-size: 11px;
