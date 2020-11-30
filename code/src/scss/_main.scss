@@ -9,7 +9,7 @@
 		background-color: $darkViolet;
 		z-index: 1;
 
-		span {
+		.pattern-left {
 			position: relative;
 
 			&::before {
@@ -21,6 +21,14 @@
 				z-index: -1;
 				background-position: left top;
 			}
+		}
+
+		.pattern-right {
+			position: absolute;
+			content: url('../assets/bg-pattern-intro-right-mobile.svg');
+			bottom: -12rem;
+			right: 0;
+			background-repeat: no-repeat;
 		}
 
 		h1 {
