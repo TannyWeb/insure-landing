@@ -1,0 +1,16 @@
+.main {
+	background-color: $darkViolet;
+
+	h1 {
+		color: $white;
+		font-family: $font-heading;
+		text-align: center;
+	}
+
+	p {
+		font-family: $font-body;
+		font-weight: light;
+		color: $white;
+		text-align: center;
+	}
+}
