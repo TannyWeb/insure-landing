@@ -42,6 +42,10 @@
 				background-repeat: no-repeat;
 				z-index: -1;
 				background-position: left top;
+
+				@include breakpoint-up(medium) {
+					content: url(../assets/bg-pattern-intro-left-desktop.svg);
+				}
 			}
 		}
 
@@ -51,6 +55,13 @@
 			bottom: -12rem;
 			right: 0;
 			background-repeat: no-repeat;
+
+			@include breakpoint-up(medium) {
+				content: url(../assets/bg-pattern-intro-right-desktop.svg);
+				top: 0;
+				bottom: 0;
+				width: 300px;
+			}
 		}
 
 		.container {
@@ -60,6 +71,10 @@
 				grid-template-columns: 1fr 1fr;
 				padding-top: 6.875rem;
 				padding-bottom: 0;
+			}
+
+			@include breakpoint-up(large) {
+				padding-bottom: 3.5rem;
 			}
 
 			h1 {
@@ -102,9 +117,10 @@
 			button {
 				@include breakpoint-up(medium) {
 					grid-column: 1/2;
-					height: 2.625rem;
+					padding: 0;
+					height: 2.25rem;
 					width: 8.75rem;
-					margin-top: 15px;
+					margin: 15px 0 0 0;
 				}
 			}
 		}
