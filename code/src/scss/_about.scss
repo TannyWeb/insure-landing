@@ -1,8 +1,21 @@
 .about {
+	padding-top: 9.375rem;
 	h2 {
-		// font-size: 1.375rem;
+		position: relative;
 		font-size: 2.25rem;
 		font-family: $font-heading;
 		text-align: center;
+
+		&::before {
+			content: '';
+			position: absolute;
+			bottom: 4.375rem;
+			left: 50%;
+			transform: translateX(-50%);
+			margin: 0 auto;
+			width: 9.375rem;
+			height: 0.0625rem;
+			background-color: $darkViolet;
+		}
 	}
 }
