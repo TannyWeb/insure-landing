@@ -45,6 +45,8 @@
 
 				@include breakpoint-up(medium) {
 					content: url(../assets/bg-pattern-intro-left-desktop.svg);
+					top: 325px;
+					left: -35px;
 				}
 			}
 		}
