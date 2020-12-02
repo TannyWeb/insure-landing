@@ -7,6 +7,10 @@
 		text-align: center;
 		padding-bottom: 3.125rem;
 
+		@include breakpoint-up(medium) {
+			text-align: left;
+		}
+
 		&::before {
 			content: '';
 			position: absolute;
@@ -16,7 +20,12 @@
 			margin-bottom: 3.75rem;
 			width: 9.375rem;
 			height: 0.0625rem;
-			background-color: $darkViolet;
+			background-color: $grayishBlue;
+
+			@include breakpoint-up(medium) {
+				left: 0;
+				transform: translateX(0);
+			}
 		}
 	}
 
