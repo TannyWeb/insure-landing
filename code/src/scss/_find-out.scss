@@ -1,21 +1,44 @@
 .find-out {
 	position: relative;
 	background-color: $darkViolet;
-	padding: 4rem 2rem;
+	z-index: 1;
 
-	&::before {
-		content: url('../assets/bg-pattern-how-we-work-mobile.svg');
-		position: absolute;
-		top: 0;
-		right: 0;
+	.pattern {
+		position: relative;
+
+		&::before {
+			content: url('../assets/bg-pattern-how-we-work-mobile.svg');
+			position: absolute;
+			top: 0;
+			right: 0;
+			z-index: -1;
+
+			@include breakpoint-up(medium) {
+				content: url('../assets/bg-pattern-how-we-work-desktop.svg');
+			}
+		}
 	}
 
-	h2 {
-		color: $white;
-		text-align: center;
-		font-family: $font-heading;
-		font-weight: 400;
-		font-size: 2.5rem;
-		margin-bottom: 2rem;
+	.container {
+		padding: 4rem 2rem;
+
+		@include breakpoint-up(medium) {
+			display: flex;
+			padding: 4rem;
+		}
+
+		h2 {
+			color: $white;
+			text-align: center;
+			font-family: $font-heading;
+			font-weight: 400;
+			font-size: 2.5rem;
+			margin-bottom: 2rem;
+
+			@include breakpoint-up(medium) {
+				text-align: left;
+				width: 40%;
+			}
+		}
 	}
 }
