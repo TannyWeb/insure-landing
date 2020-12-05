@@ -47,14 +47,19 @@
 			display: flex;
 			flex-direction: column;
 			margin-bottom: 1.25rem;
+			text-transform: uppercase;
+			font-family: $font-body;
+			font-weight: 700;
+			font-size: 14px;
 
 			p {
 				margin-bottom: 1rem;
-				text-transform: uppercase;
-				font-family: $font-body;
-				font-weight: 700;
-				font-size: 14px;
 				color: $darkGrayishViolet;
+			}
+
+			a {
+				color: $darkViolet;
+				line-height: 2;
 			}
 		}
 	}
