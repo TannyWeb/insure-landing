@@ -4,6 +4,11 @@
 	z-index: 1;
 	margin-bottom: 5rem;
 
+	@include breakpoint-up(medium) {
+		overflow: hidden;
+		margin-bottom: 7rem;
+	}
+
 	.pattern {
 		position: relative;
 

@@ -8,15 +8,28 @@
 		&::before {
 			position: absolute;
 			content: url('../assets/bg-pattern-footer-mobile.svg');
+
+			@include breakpoint-up(medium) {
+				content: url('../assets/bg-pattern-footer-desktop.svg');
+			}
 		}
 	}
 	.container {
+		@include breakpoint-up(medium) {
+			padding-top: 5rem;
+			padding-bottom: 5rem;
+		}
 	}
 
 	&__top-section {
 		text-align: center;
 		position: relative;
 		margin-bottom: 4rem;
+
+		@include breakpoint-up(medium) {
+			display: flex;
+			justify-content: space-between;
+		}
 
 		&::after {
 			position: absolute;
@@ -25,6 +38,10 @@
 			border: .5px solid #c7c7c7;
 			width: 100%;
 			bottom: -1.875rem;
+
+			@include breakpoint-up(medium) {
+				bottom: -1rem;
+			}
 		}
 
 		> img {
@@ -42,6 +59,12 @@
 
 	&__bottom-section {
 		text-align: center;
+
+		@include breakpoint-up(medium) {
+			display: grid;
+			grid-template-columns: 2fr 2fr 2fr 2fr 1fr;
+			text-align: left;
+		}
 
 		> div {
 			display: flex;
