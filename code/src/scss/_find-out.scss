@@ -25,6 +25,7 @@
 		@include breakpoint-up(medium) {
 			display: flex;
 			padding: 4rem;
+			justify-content: space-between;
 		}
 
 		h2 {
@@ -38,6 +39,15 @@
 			@include breakpoint-up(medium) {
 				text-align: left;
 				width: 40%;
+				margin-bottom: 0;
+			}
+		}
+
+		.button {
+			@include breakpoint-up(medium) {
+				margin: 0;
+				height: 3.125rem;
+				align-self: center;
 			}
 		}
 	}
